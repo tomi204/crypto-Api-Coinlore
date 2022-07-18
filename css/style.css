@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap");
+
+* {
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: rgb(250, 0, 255);
+  background: radial-gradient(
+    circle,
+    rgba(250, 0, 255, 1) 0%,
+    rgba(66, 43, 64, 1) 100%
+  );
+  min-height: 1500px;
+  min-width: 1000px;
+}
+
+.menu {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 90px;
+
+  position: absolute;
+  height: 90px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  font-size: 20px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 20px;
+}
+
+.menu li a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: white;
+  padding: 40px;
+  display: block;
+}
+
+.menu li {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a:hover {
+  background: rgb(174, 35, 177);
+}
+
+.buscar {
+  position: relative;
+  padding: 5px;
+}
+.buscar input {
+  background-color: #ffffff;
+  width: 0px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s ease;
+}
+.search1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(161, 35, 192);
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.buscar:hover input {
+  width: 240px;
+}
+.buscar input:focus {
+  width: 240px;
+}
+
+.logo img {
+  max-width: 125px;
+  max-height: 125px;
+  margin-left: 30px;
+}
+
+.menu2 {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px 90px;
+
+  position: relative;
+  height: 90px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  font-size: 20px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.menu2 li a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: white;
+  padding: 40px;
+  display: block;
+}
+.menu2 li {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  text-align: center;
+}
+.bitcoin {
+  text-align: center;
+}
+
+table {
+  width: 750px;
+  border-collapse: collapse;
+  margin: 40px auto;
+
+  color: #ffffff;
+  border-color: rgb(255, 255, 255);
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: rgb(255, 255, 255);
+}
+
+th {
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+td,
+th {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+}
+.check {
+  background-color: black;
+}
